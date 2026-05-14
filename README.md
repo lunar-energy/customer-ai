@@ -1,3 +1,5 @@
+# Lunar Energy Customer AI Tools
+
 # Remote MCP
 
 The Gridshare Customer MCP server exposes your energy data to AI assistants that support the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP), such as Claude Desktop. Once connected, the AI can answer natural-language questions about your devices, sites, and telemetry — for example: *"What was my battery's average state of charge last week?"* or *"Which sensor IDs should I query for solar production?"*
