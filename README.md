@@ -48,7 +48,7 @@ Supported clients:
       "command": "npx",
       "args": [
         "mcp-remote",
-        "https://<MCP_SERVER_URL>/mcp"
+        "https://mcp.customer.mygridshare.com/mcp"
       ]
     }
   }
@@ -83,7 +83,7 @@ ChatGPT connects to remote MCP servers directly over HTTPS — no local bridge o
 
 1. Open ChatGPT and go to **Settings → Connectors**.
 2. Click **Add custom connector**.
-3. Paste your MCP server URL (`https://<MCP_SERVER_URL>/mcp`) and click **Connect**.
+3. Paste your MCP server URL (`https://mcp.customer.mygridshare.com/mcp`) and click **Connect**.
 4. ChatGPT will open the Gridshare login page in your browser. Sign in with your Lunar/Gridshare credentials to authorise the connection.
 5. Once authorised, select which tools to enable and save.
 
@@ -116,7 +116,7 @@ Add the following to your Gemini CLI settings file.
 {
   "mcpServers": {
     "Lunar Gridshare": {
-      "url": "https://<MCP_SERVER_URL>/mcp",
+      "url": "https://mcp.customer.mygridshare.com/mcp",
       "oauth": {
         "enabled": true
       }
