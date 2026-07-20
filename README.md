@@ -81,21 +81,14 @@ ChatGPT connects to remote MCP servers directly over HTTPS — no local bridge o
 
 ### Configuration
 
-1. Open ChatGPT and go to **Settings → Connectors**.
-2. Click **Add custom connector**.
-3. Paste your MCP server URL (`https://mcp.customer.mygridshare.com/mcp`) and click **Connect**.
-4. ChatGPT will open the Gridshare login page in your browser. Sign in with your Lunar/Gridshare credentials to authorise the connection.
-5. Once authorised, select which tools to enable and save.
+1. Open ChatGPT and go to **Plugins → Manage** (gear icon in the top-right).
+2. Click on the **MCPs** tab and '**+ Add server**'.
+3. Give it a name: `Lunar Gridshare`
+4. Switch the type to **Streamable HTTP**
+5. Paste your MCP server URL: `https://mcp.customer.mygridshare.com/mcp` and click **Save**.
+6. Click the **Authenticate** button to launch a login page in your browser. Sign in with your Lunar/Gridshare credentials to authorise the connection.
 
-The connector will appear in the tool picker during conversations. ChatGPT will ask for confirmation before executing any action that modifies data.
-
-### Troubleshooting
-
-**Connector option is not visible**\
-Confirm your ChatGPT subscription includes MCP support (Plus or above). The feature may also require **Developer mode** to be enabled: Settings → Connectors → Advanced → toggle **Developer mode** on.
-
-**Re-authorising**\
-Go to **Settings → Connectors**, find the Lunar Gridshare connector, and click **Disconnect**. Then reconnect using the steps above.
+That's ready to use - you should be able to prompt away.
 
 ---
 
