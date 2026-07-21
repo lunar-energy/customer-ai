@@ -27,64 +27,26 @@ Log in with your Lunar System or Gridshare account credentials. This uses an OAu
 
 Supported clients:
 
-- [Claude Desktop](#claude-desktop)
-- [ChatGPT](#chatgpt) — web and desktop
-- [Gemini CLI](#gemini-cli)
+- [Claude](#claude) - web or desktop
+- [ChatGPT](#chatgpt) — web or desktop
+- [Gemini CLI](#gemini-cli) - desktop only
 
 ---
 
-## Claude Desktop
+## Claude
 
-### Prerequisites
+Requires a Prox, Max, Team or Enterprise subscription.
 
-* [Claude Desktop](https://claude.ai/download)
-* [Node.js](https://nodejs.org/en/download) 18+ installed (required for `mcp-remote`)
-
-### Configuration
-
-1. Add the following block to your Claude Desktop configuration file.
-
-**macOS** — `~/Library/Application Support/Claude/claude_desktop_config.json`\
-**Windows** — `%APPDATA%\Claude\claude_desktop_config.json`\
-**Linux** — `~/.config/Claude/claude_desktop_config.json`
-
-```json
-{
-  "mcpServers": {
-    "Lunar Gridshare": {
-      "command": "npx",
-      "args": [
-        "mcp-remote",
-        "https://mcp.customer.mygridshare.com/mcp"
-      ]
-    }
-  }
-}
-```
-
-2. After saving the file, restart Claude Desktop.
-3. Go to *Customize > Connectors* and next to 'Lunar Gridshare', click 'Connect'.  On first use you will be redirected to the Gridshare login page in your browser to authorise the connection. The session is then stored locally — subsequent startups connect automatically.
-
-### Troubleshooting
-
-**No tools appear in Claude Desktop**\
-- Node.js definitely installed?
-- Restart Claude Desktop after editing the config file.
-
-**Re-authorising**\
-If you need to log in again (e.g. after a password change), delete the cached token stored by `mcp-remote`:
-
-```bash
-rm -rf ~/.mcp-auth
-```
-
-Then restart Claude Desktop — the OAuth flow will start again automatically.
+1. Go to **Settings** > **Connectors** and **Add** > **Add custom connector**.
+2. Name: `Lunar Gridshare`
+3. Remote MCP Server URL: `https://mcp.customer.us.mygridshare.com/mcp`
+4. Click 'Add' and then click 'Connect' to authenticate with your Lunar/Gridshare credentials.
 
 ---
 
 ## ChatGPT
 
-ChatGPT connects to remote MCP servers directly over HTTPS — no local bridge or Node.js installation is needed. This feature requires a **Plus, Pro, Team, Enterprise, or Edu** subscription.
+Requires a Plus, Pro, Team, Enterprise, or Edu subscription.
 
 ### Configuration
 
@@ -92,10 +54,8 @@ ChatGPT connects to remote MCP servers directly over HTTPS — no local bridge o
 2. Click on the **MCPs** tab and '**+ Add server**'.
 3. Give it a name: `Lunar Gridshare`
 4. Switch the type to **Streamable HTTP**
-5. Paste your MCP server URL: `https://mcp.customer.mygridshare.com/mcp` and click **Save**.
+5. Paste your MCP server URL: `https://mcp.customer.us.mygridshare.com/mcp` and click **Save**.
 6. Click the **Authenticate** button to launch a login page in your browser. Sign in with your Lunar/Gridshare credentials to authorise the connection.
-
-That's ready to use - you should be able to prompt away.
 
 ---
 
@@ -116,7 +76,7 @@ Add the following to your Gemini CLI settings file.
 {
   "mcpServers": {
     "Lunar Gridshare": {
-      "url": "https://mcp.customer.mygridshare.com/mcp",
+      "url": "https://mcp.customer.us.mygridshare.com/mcp",
       "oauth": {
         "enabled": true
       }
