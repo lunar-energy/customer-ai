@@ -14,9 +14,9 @@
 
 # Lunar Energy Customer AI Tools
 
-The Lunar Gridshare MCP server exposes your energy data to AI assistants that support the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP). Once connected, the AI can answer natural-language questions about your devices, sites, and telemetry — for example: *"What was my battery's average state of charge last week?"*, *"Show me my excess solar for the last week"* or *"Show me my Lunar battery plan for today"*.
+The Lunar Energy MCP server exposes your energy data to AI assistants that support the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP). Once connected, the AI can answer natural-language questions about your devices, sites, and telemetry — for example: *"What was my battery's average state of charge last week?"*, *"Show me my excess solar for the last week"* or *"Show me my Lunar battery plan for today"*.
 
-Log in with your Lunar System or Gridshare account credentials. This uses an OAuth 2.1 flow - no additional secrets or API keys are needed.
+Log in with your Lunar Energy account credentials. This uses an OAuth 2.1 flow - no additional secrets or API keys are needed.
 
 Supported clients:
 
@@ -28,16 +28,24 @@ Supported clients:
 
 ## Claude
 
+### Prerequisites
+
 Requires a Prox, Max, Team or Enterprise subscription.
 
+### Configuration
+
+The **Lunar Energy** connector is available in the Anthropic Directory.  Alternatively, you can add it as a custom connector:
+
 1. Go to **Settings** > **Connectors** and **Add** > **Add custom connector**.
-2. Name: `Lunar Gridshare`
-3. Remote MCP Server URL: `https://mcp.customer.us.mygridshare.com/mcp`
-4. Click 'Add' and then click 'Connect' to authenticate with your Lunar/Gridshare credentials.
+2. Name: `Lunar Energy`
+3. Remote MCP Server URL: `https://mcp.lunarenergy.com/mcp`
+4. Click 'Add' and then click 'Connect' to authenticate with your Lunar Energy credentials.
 
 ---
 
 ## ChatGPT
+
+### Prerequisites
 
 Requires a Plus, Pro, Team, Enterprise, or Edu subscription.
 
@@ -45,10 +53,10 @@ Requires a Plus, Pro, Team, Enterprise, or Edu subscription.
 
 1. Open ChatGPT and go to **Plugins → Manage** (gear icon in the top-right).
 2. Click on the **MCPs** tab and '**+ Add server**'.
-3. Give it a name: `Lunar Gridshare`
+3. Give it a name: `Lunar Energy`
 4. Switch the type to **Streamable HTTP**
-5. Paste your MCP server URL: `https://mcp.customer.us.mygridshare.com/mcp` and click **Save**.
-6. Click the **Authenticate** button to launch a login page in your browser. Sign in with your Lunar/Gridshare credentials to authorise the connection.
+5. Paste your MCP server URL: `https://mcp.lunarenergy.com/mcp` and click **Save**.
+6. Click the **Authenticate** button to launch a login page in your browser. Sign in with your Lunar Energy credentials to authorise the connection.
 
 ---
 
@@ -68,8 +76,8 @@ Add the following to your Gemini CLI settings file.
 ```json
 {
   "mcpServers": {
-    "Lunar Gridshare": {
-      "url": "https://mcp.customer.us.mygridshare.com/mcp",
+    "Lunar Energy": {
+      "url": "https://mcp.lunarenergy.com/mcp",
       "oauth": {
         "enabled": true
       }
