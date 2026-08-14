@@ -12,7 +12,7 @@
          ++++++                                                                      
 ```
 
-# Lunar Energy Customer AI Tools
+# Lunar Energy AI Connector
 
 The Lunar Energy MCP server exposes your energy data to AI assistants that support the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP). Once connected, the AI can answer natural-language questions about your devices, sites, and telemetry — for example: *"What was my battery's average state of charge last week?"*, *"Show me my excess solar for the last week"* or *"Show me my Lunar battery plan for today"*.
 
