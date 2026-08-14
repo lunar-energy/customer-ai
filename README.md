@@ -55,7 +55,7 @@ Requires a Plus, Pro, Team, Enterprise, or Edu subscription.
 2. Click on the **MCPs** tab and '**+ Add server**'.
 3. Give it a name: `Lunar Energy`
 4. Switch the type to **Streamable HTTP**
-5. Paste your MCP server URL: `https://mcp.lunarenergy.com/mcp` and click **Save**.
+5. Paste your MCP server URL: `https://mcp.lunarenergy.com/mcp` and click **Save** (no other details required).
 6. Click the **Authenticate** button to launch a login page in your browser. Sign in with your Lunar Energy credentials to authorise the connection.
 
 ---
