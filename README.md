@@ -30,7 +30,7 @@ Supported clients:
 
 ### Prerequisites
 
-Requires a Prox, Max, Team or Enterprise subscription.
+Requires a Pro, Max, Team or Enterprise subscription.
 
 ### Configuration
 
@@ -56,7 +56,7 @@ Requires a Plus, Pro, Team, Enterprise, or Edu subscription.
 3. Give it a name: `Lunar Energy`
 4. Switch the type to **Streamable HTTP**
 5. Paste your MCP server URL: `https://mcp.lunarenergy.com/mcp` and click **Save** (no other details required).
-6. Click the **Authenticate** button to launch a login page in your browser. Sign in with your Lunar Energy credentials to authorise the connection.
+6. Click the **Authenticate** button to launch a login page in your browser. Sign in with your Lunar Energy credentials to authorize the connection.
 
 ---
 
@@ -86,14 +86,14 @@ Add the following to your Gemini CLI settings file.
 }
 ```
 
-After saving the file, start or restart the Gemini CLI (`gemini`). Run `/mcp auth` to trigger the OAuth flow — you will be redirected to the Lunar Gridshare login page in your browser. Once authorised, the connection is cached and reconnects automatically on subsequent sessions.
+After saving the file, start or restart the Gemini CLI (`gemini`). Run `/mcp auth` to trigger the OAuth flow — you will be redirected to the Lunar Energy login page in your browser. Once authorized, the connection is cached and reconnects automatically on subsequent sessions.
 
 ### Troubleshooting
 
 **No tools appear**\
 Run `/mcp` inside the Gemini CLI to list connected servers and their status. Check that the URL in `settings.json` is correct and reachable.
 
-**Re-authorising**\
+**Re-authorizing**\
 Run `/mcp auth` inside the Gemini CLI to restart the OAuth flow.
 
 ---
@@ -104,15 +104,24 @@ The following tools are available across all supported clients once connected:
 
 | Tool | Description |
 | --- | --- |
-| `list_sites` | List the site IDs the authenticated customer has access to. |
-| `show_site` | Show a single site's customer-visible attributes — address, site reference, and its configured import/export tariff IDs. |
-| `get_site_topology` | Get the electrical topology of a site — the sensor IDs and channels needed to query telemetry. |
-| `get_site_current_state` | Get a site's current state — the latest reading for every sensor plus each controllable device's operation mode and overlay plan. |
-| `get_site_telemetry` | Fetch time-series telemetry for all sensors at a site over any time window, each stream labelled with its role (battery, pv, grid, inverter, consumption). |
-| `list_site_savings` | List a site's cost savings versus a consumption-only baseline, broken down by month. |
-| `list_devices` | List all devices the authenticated customer owns. |
-| `show_device` | Show metadata for a single device (device type, site, publishing partners). |
-| `get_device_operation_mode` | Get the current operation mode (`simple`, `schedule`, or `smart`) for a device. |
-| `get_device_overlay_plan` | Get the scheduled overlay plan for a device — the sequence of commands (charge, idle, setpoint, heat water) that will execute in order, and when they start. |
-| `get_device_telemetry` | Fetch time-bucketed telemetry for a single sensor stream. Accepts ISO 8601 intervals and resolutions (PT15M, PT1H, P1D). |
-| `show_tariff` | Show a tariff configured on one of the customer's sites — its metadata and a page of price timeseries values. |
+| `list_sites` | List the homes on your account. |
+| `show_site` | Show where a home is and which electricity tariffs it's on. |
+| `get_site_topology` | Show what's installed at a home — solar, battery, inverters, EV charger and meters — and how it's wired together. |
+| `get_site_current_state` | See what your home is doing right now, and what's scheduled next. |
+| `get_site_telemetry` | See your solar, battery, grid and home usage over any period. |
+| `list_site_savings` | See how much you've saved on your electricity bill, month by month. |
+| `list_site_vpp_programs` | See which grid programs your home takes part in, and what you've earned from them. |
+| `list_site_vpp_events` | See when your battery is called on to help the grid — recent and upcoming events. |
+| `list_devices` | List the hardware you own — inverters, batteries, EV chargers and meters. |
+| `show_device` | Show the details of a single piece of hardware. |
+| `get_device_operation_mode` | See how your battery is being controlled. |
+| `get_device_overlay_plan` | See what your battery or EV charger is scheduled to do next. |
+| `get_device_telemetry` | See readings from a single piece of equipment over any period. |
+| `show_tariff` | Show your electricity rates — what you pay, and what you're paid for exporting. |
+| `get_data_guide` | Reference notes the AI uses to read your data correctly. |
+
+---
+
+## Privacy Policy
+
+The Privacy Policy governing the AI Connector can be found here: https://www.lunarenergy.com/privacy-policy
