@@ -18,13 +18,15 @@ The Lunar Energy MCP server exposes your energy data to AI assistants that suppo
 
 Log in with your Lunar Energy account credentials. This uses an OAuth 2.1 flow - no additional secrets or API keys are needed.
 
-Supported clients:
+Suggested clients:
 
 - [Claude](#claude) - web or desktop
 - [ChatGPT](#chatgpt) — web or desktop
 - [Gemini CLI](#gemini-cli) - desktop only
 
 Note that some clients require specific subscriptions/tiers to add connectors - please check the documentation for your client.
+
+For a full list clients that can be connected, see [Supported Clients](./supported-clients.md).
 
 ---
 
