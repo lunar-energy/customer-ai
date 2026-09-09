@@ -24,13 +24,11 @@ Supported clients:
 - [ChatGPT](#chatgpt) — web or desktop
 - [Gemini CLI](#gemini-cli) - desktop only
 
+Note that some clients require specific subscriptions/tiers to add connectors - please check the documentation for your client.
+
 ---
 
 ## Claude
-
-### Prerequisites
-
-Requires a Pro, Max, Team or Enterprise subscription.
 
 ### Configuration
 
@@ -45,10 +43,6 @@ The **Lunar Energy** connector is available in the Anthropic Directory.  Alterna
 
 ## ChatGPT
 
-### Prerequisites
-
-Requires a Plus, Pro, Team, Enterprise, or Edu subscription.
-
 ### Configuration
 
 1. Open ChatGPT and go to **Plugins → Manage** (gear icon in the top-right).
@@ -61,10 +55,6 @@ Requires a Plus, Pro, Team, Enterprise, or Edu subscription.
 ---
 
 ## Gemini CLI
-
-### Prerequisites
-
-* [Gemini CLI](https://github.com/google-gemini/gemini-cli) installed (`npm install -g @google/gemini-cli`)
 
 ### Configuration
 
