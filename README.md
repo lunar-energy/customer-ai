@@ -26,7 +26,7 @@ Suggested clients:
 
 Note that some clients require specific subscriptions/tiers to add connectors - please check the documentation for your client.
 
-For a full list clients that can be connected, see [Supported Clients](./supported-clients.md).
+For a full list of clients that can be connected, see [Supported Clients](./supported-clients.md).
 
 ---
 
